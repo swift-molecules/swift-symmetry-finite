@@ -1,12 +1,13 @@
-internal import Cardinal
+public import Cardinal
 public import Finite
-import Ordinal
+public import Finite_Ordinal
+public import Ordinal
 public import Symmetry
 
-extension Phase: Finite.Enumerable {
+extension Phase: @retroactive Finite.Enumerable {
 
     @inlinable
-    public static var count: Cardinal { 4 }
+    public static var count: Cardinal { Cardinal(UInt(4)) }
 
     @inlinable
     public var ordinal: Ordinal { Ordinal(UInt(rawValue)) }

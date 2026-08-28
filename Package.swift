@@ -19,7 +19,11 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-symmetry.git",
+            url: "https://github.com/swift-atoms/swift-symmetry.git",
+            branch: "main"
+        ),
+        .package(
+            url: "https://github.com/swift-molecules/swift-finite-ordinal.git",
             branch: "main"
         ),
         .package(
@@ -40,6 +44,7 @@ let package = Package(
             name: "Symmetry Finite",
             dependencies: [
                 .product(name: "Symmetry", package: "swift-symmetry"),
+                .product(name: "Finite Ordinal", package: "swift-finite-ordinal"),
                 .product(name: "Finite", package: "swift-finite"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
                 .product(name: "Ordinal", package: "swift-ordinal"),
@@ -50,6 +55,9 @@ let package = Package(
             dependencies: [
                 "Symmetry Finite",
                 .product(name: "Symmetry", package: "swift-symmetry"),
+                .product(name: "Finite Ordinal", package: "swift-finite-ordinal"),
+                .product(name: "Cardinal", package: "swift-cardinal"),
+                .product(name: "Ordinal", package: "swift-ordinal"),
             ]
         ),
     ],
