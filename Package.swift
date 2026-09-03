@@ -53,7 +53,6 @@ let package = Package(
         .testTarget(
             name: "Symmetry Finite Tests",
             dependencies: [
-                "Symmetry Finite",
                 .product(name: "Symmetry", package: "swift-symmetry"),
                 .product(name: "Finite Ordinal", package: "swift-finite-ordinal"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
