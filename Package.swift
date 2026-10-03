@@ -23,10 +23,6 @@ let package = Package(
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-finite-ordinal.git",
-            branch: "main"
-        ),
-        .package(
             url: "https://github.com/swift-atoms/swift-finite.git",
             branch: "main"
         ),
@@ -44,7 +40,6 @@ let package = Package(
             name: "Symmetry Finite",
             dependencies: [
                 .product(name: "Symmetry", package: "swift-symmetry"),
-                .product(name: "Finite Ordinal", package: "swift-finite-ordinal"),
                 .product(name: "Finite", package: "swift-finite"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
                 .product(name: "Ordinal", package: "swift-ordinal"),
@@ -53,8 +48,9 @@ let package = Package(
         .testTarget(
             name: "Symmetry Finite Tests",
             dependencies: [
+                "Symmetry Finite",
                 .product(name: "Symmetry", package: "swift-symmetry"),
-                .product(name: "Finite Ordinal", package: "swift-finite-ordinal"),
+                .product(name: "Finite", package: "swift-finite"),
                 .product(name: "Cardinal", package: "swift-cardinal"),
                 .product(name: "Ordinal", package: "swift-ordinal"),
             ]

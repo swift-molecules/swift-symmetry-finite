@@ -1,6 +1,5 @@
 public import Cardinal
 public import Finite
-public import Finite_Ordinal
 public import Ordinal
 public import Symmetry
 

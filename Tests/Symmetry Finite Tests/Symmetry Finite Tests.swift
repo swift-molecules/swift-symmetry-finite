@@ -1,5 +1,5 @@
 import Cardinal
-import Finite_Ordinal
+import Finite
 import Ordinal
 import Symmetry
 import Symmetry_Finite
